@@ -391,9 +391,9 @@ const TradeMap = {
             .attr("class", "country-node")
             .attr("cx", d => this.getProjectedPoint(d)[0])
             .attr("cy", d => this.getProjectedPoint(d)[1])
-            .attr("r", 3 / Math.sqrt(currentK))
-            .attr("fill", "#fff")
-            .attr("stroke", "#000")
+            .attr("r", 5 / Math.sqrt(currentK))
+            .attr("fill", "transparent")
+            .attr("stroke", "transparent")
             .attr("stroke-width", 1 / currentK)
             .attr("display", d => this.isVisible(d) ? "block" : "none")
             .on("mouseover", (event, d) => App.showTooltip(event, d))
@@ -626,4 +626,5 @@ const TradeMap = {
             </div>`;
         container.appendChild(nodeDiv);
     }
+
 };
